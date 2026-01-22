@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MovingForward : MonoBehaviour
 {
-    private const float Speed = 0.05f;
+    private const float Speed = 10f;
 
     private void Update()
     {
         var nextPosition = transform.position;
-        nextPosition.z -= Speed;
+        nextPosition.z -= Speed * Time.deltaTime;
         transform.position = nextPosition;
     }
 }
